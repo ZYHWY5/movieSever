@@ -20,7 +20,7 @@ let post = (account, password) => {
     }
   }
   if(isallow){
-    axios.post('https://365b02ce-b845-4125-b13d-c4a087c1497a.mock.pstmn.io/user', {
+    axios.post('/api/user', {
       account:account,
       password:password
     });

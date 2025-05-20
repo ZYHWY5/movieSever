@@ -3,7 +3,7 @@ import axios from "axios";
 let getFun = () => {
   return new Promise(
     (resolve) => {
-      axios.get("https://365b02ce-b845-4125-b13d-c4a087c1497a.mock.pstmn.io/fun").then((result) => {
+      axios.get("/api/fun").then((result) => {
         resolve(result.data);
       });
     },

@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'login',
-      component: () => import('/src/views/login.vue'),
+      component: () => import('../views/login.vue'),
     },
     {
       path: '/register',
@@ -58,7 +58,7 @@ const router = createRouter({
 
 
 router.beforeEach((to, from) => {
-  if(to.path == '/home' || to.path == '/message' || to.path == '/password' || to.path == '/personal'){
+  if(to.path == '/home'){
     if(!localStorage.getItem("id")){
       return{
         path:'/'

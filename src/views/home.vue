@@ -15,6 +15,7 @@ let indexStore = useIndexStore();
 
 let movieList = ref();
 movieList.value = await getMovie();
+console.log(movieList.value);
 
 let list = ref([]);
 list.value = divide(movieList.value);
