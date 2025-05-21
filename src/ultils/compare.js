@@ -10,6 +10,11 @@ let user = ref();
 
 let compare = async (account, password) => {
 
+  if(account == '' || password == '' || account == undefined || password == undefined){
+    alert('请输入账号和密码');
+    return;
+  }
+
   user.value = await getUser();
 
   for (let item of user.value) {

@@ -22,7 +22,8 @@ let post = (account, password) => {
   if(isallow){
     axios.post('/api/user', {
       account:account,
-      password:password
+      password:password,
+      name:'系统名称'
     });
     alert('注册成功');
     router.push({
